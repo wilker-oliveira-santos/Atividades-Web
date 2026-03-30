@@ -1,0 +1,144 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --cor-fundo: #f0f0f5;
+    --cor-texto: #000;
+    --cor-header-footer: #2c3e50;
+    --cor-card: #ffffff;
+}
+
+#tema:checked ~ header,
+#tema:checked ~ main,
+#tema:checked ~ footer {
+    --cor-fundo: #121212;
+    --cor-texto: #ffffff;
+    --cor-header-footer: #1a1a1a;
+    --cor-card: #1e1e1e;
+}
+
+body, header, main, footer, div {
+    transition: background 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-header-footer);
+    height: 8vh;
+}
+
+.hamburguer {
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: var(--cor-header-footer);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-top: 4rem;
+  gap: 1rem;
+  transition: left 0.3s ease;
+}
+
+#menu-toggle{
+    width: 1px;
+    height: 1px;
+}
+
+#menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+label{
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+#titulo{
+    text-align: center;
+    color: #fff;
+}
+
+main{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    min-height: 84vh;
+}
+
+.cards{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cards div{
+    background-color: var(--cor-card);
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: var(--cor-texto);
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-header-footer);
+    color: #fff;
+    height: 8vh;
+}
+
+footer p{
+    color: #fff;
+}
