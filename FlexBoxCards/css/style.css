@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cards-main{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    min-height: 100vh;
+    background: #b657c7;
+    background: linear-gradient(90deg, rgba(182, 87, 199, 1) 0%, rgba(98, 87, 199, 1) 50%, rgba(83, 163, 237, 1) 100%);
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0px;
+    gap: 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+p{
+    text-align: justify;
+    margin: 20px;
+}
+
+figure{
+    margin: 0;
+}
+img{
+    margin: 0px;
+    height: 200px;
+    width: 400px;
+    display: block;
+    object-fit: fill;
+}
+#esporte-img{
+    margin-bottom: 25px;
+}
+h2{
+    text-transform: uppercase;
+}
