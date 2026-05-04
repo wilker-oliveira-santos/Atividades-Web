@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #a3a2b4 0%, #2d3130 100%);
+    gap: 20px;
+
+}
+
+select,input,button{
+    width: 200px;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 50px;
+    width: 300px;
+        border-radius: 10px;
+}

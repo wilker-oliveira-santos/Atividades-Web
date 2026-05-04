@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+    <h1>📚NextTask</h1>
+        <input type="text" id="tarefa" placeholder="Digite a tarefa:">
+        <select name="" id="prioridade">
+            <option value="baixa">Prioridade Baixa</option>
+            <option value="media">Prioridade Média</option>
+            <option value="alta">Prioridade Alta</option>
+        </select>
+        <button id="adicionar">Adicionar</button>
+    </section>
+    <script>
+        let Adicionar = document.getElementById("adicionar");
+
+        Adicionar.addEventListener("click",()=>{
+            let tarefa = document.getElementById("tarefa").value;
+            let prioridade = document.getElementById("prioridade").value;
+
+            let card = document.createElement("section");
+
+            if(tarefa === ""){
+                alert("Digite uma tarefa válida")
+                card.style.display = "none"
+            }else{
+                if(prioridade == "baixa"){
+                    card.style.backgroundColor = "#EDADAD"
+                    card.style.borderLeft = "6px solid"
+                    card.style.borderColor = "#E63535"
+                    card.style.width = "300px"
+                    card.style.padding = "10px"
+                    card.innerText = "Tarefa: " + tarefa + " | Prioridade: " + prioridade;
+                }else if(prioridade == "media"){
+                    card.style.backgroundColor = "#fff3cd"
+                    card.style.borderLeft = "6px solid"
+                    card.style.borderColor = "#ffc107"
+                    card.style.width = "300px"
+                    card.style.padding = "10px"
+                    card.innerText = "Tarefa: " + tarefa + " | Prioridade: " + prioridade;
+                }else{
+                    card.style.backgroundColor = "#d1e7dd"
+                    card.style.borderLeft = "6px solid"
+                    card.style.borderColor = "#198754"
+                    card.style.width = "300px"
+                    card.style.padding = "10px"
+                    card.innerText = "Tarefa: " + tarefa + " | Prioridade: " + prioridade;
+                }
+            }
+            document.body.appendChild(card)
+        });
+     </script>
+</body>
+</html>
